@@ -12,3 +12,4 @@ is needed from repository:
 
     https://github.com/a8bit/EightBit-Atari-Fonts/
 
+![](/assets/images/example_view.png)
