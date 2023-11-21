@@ -8,7 +8,7 @@ In addition a special font:
 
     TrueType/EightBit%20Atari-Standard.ttf
 
-is needed from repository:
+is needed (and installed in the system) from repository:
 
     https://github.com/a8bit/EightBit-Atari-Fonts/
 
