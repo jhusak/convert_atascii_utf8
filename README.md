@@ -6,7 +6,7 @@ However, inversed chars cannot be entered from keyboard, only from char picker.
 
 In addition a special font:
 
-    TrueType/EightBit%20Atari-Standard.ttf
+    TrueType/EightBit Atari-Standard.ttf
 
 is needed (and installed in the system) from repository:
 
