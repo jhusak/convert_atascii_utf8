@@ -12,6 +12,8 @@ is needed (and installed in the system) from repository:
 
     https://github.com/a8bit/EightBit-Atari-Fonts/
 
+(for convinience placed here)
+
 # example:
 
 ![](/example_view.png)
