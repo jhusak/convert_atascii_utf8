@@ -41,7 +41,7 @@ int main(int argc, char ** argv) {
 				chrarr[0]<<=1;
 			}
 			character&=(1<<(6-cnt))-1;
-			int c2=cnt;
+			int c2;
 			for (c2=1; c2<=cnt; c2++) {
 				character<<=6;
 				character|=chrarr[c2]&0x3f;
