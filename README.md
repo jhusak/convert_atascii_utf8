@@ -48,6 +48,6 @@ type
 
 and copy them somewhere where the PATH can look into.
 
-# example:
+# Example:
 
 ![](/example_view.png)
