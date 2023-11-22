@@ -14,15 +14,16 @@ is needed (and installed in the system) from repository:
 
 (for convinience placed here)
 
+## Tools
 ### convertatasciitoutf8
 
-    - converts ATASCII files to UTF-8 encoded files, that look the same as on Atari 8-bit. The files can be edited, and then backconverted with tool:
+converts ATASCII files to UTF-8 encoded files, that look the same as on Atari 8-bit. The files can be edited, and then backconverted with tool:
 
 ### convertutf8toatascii
 
-    - which converts UTF-8 files with inverse characters encoded - back to plain ATASCII 8-bit files.
+which converts UTF-8 files with inverse characters encoded - back to plain ATASCII 8-bit files.
 
-# change inverse filter
+### change inverse filter
 The chinv command changes inverse of ATASCII characters, when inversed characters are stored as unicode codes, and converting plain <128 characters to unicode inversed.
 
 You may use it in vim as a block text filter, for example:
