@@ -38,6 +38,15 @@ Special font EightBit Atari-Standard.ttf must be used to properly display invers
 please use those tools as you wish :)
 
 Jakub Husak (11.2023), Poland.
+# building
+
+type
+
+    make
+    
+(make tool and C compiler needed)
+
+and copy them somewhere where the PATH can look into.
 
 # example:
 
