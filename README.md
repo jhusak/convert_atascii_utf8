@@ -17,11 +17,15 @@ is needed (and installed in the system) from repository:
 ## Tools
 ### convertatasciitoutf8
 
-converts ATASCII files to UTF-8 encoded files, that look the same as on Atari 8-bit. The files can be edited, and then backconverted with tool:
+Usage: convertatasciitoutf8 [-7] <atasciifilein> <utf8fileout>
+
+converts ATASCII files to UTF-8 encoded files, that look the same as on Atari 8-bit. Optional 7 bit mode (-7 option) strips eight bit, making inverse characters not inversed. The files can be edited then, and then backconverted with tool:
 
 ### convertutf8toatascii
 
-which converts UTF-8 files with inverse characters encoded - back to plain ATASCII 8-bit files.
+Usage: convertutf8toatascii <utf8filein> <atasciifileout>
+
+which converts UTF-8 files with inverse characters encoded - back to plain ATASCII 8-bit files. If eight bit was not stripped, this operation is reversible to previous.
 
 ### change inverse filter
 The chinv command changes inverse of ATASCII characters, when inversed characters are stored as unicode codes, and converting plain <128 characters to unicode inversed.

@@ -5,7 +5,7 @@ int main(int argc, char ** argv) {
 	int err=0;
 
 	if (argc!=3) {
-		printf("Usage: %s fileATASCII fileUTF8\n",argv[0]);
+		printf("Usage: %s infileUTF8 outfileATASCII\n",argv[0]);
 		return(64);
 	}
 
