@@ -2,9 +2,10 @@
 int main(int argc, char ** argv) {
 	FILE *inputFile, *outputFile;
 	int character;
+	int err=0;
 
 	if (argc!=3) {
-		printf("Usage: %s fileATASCII fileUTF8\n",argv[0]);
+		printf("Usage: %s infileUTF8 outfileATASCII\n",argv[0]);
 		return(64);
 	}
 
@@ -36,12 +37,15 @@ int main(int argc, char ** argv) {
 			while (chrarr[0]&0x80) {
 				if ((chrarr[++cnt]= fgetc(inputFile)) == EOF) {
 					printf("Unexpected eof. exiting.\n");
-					goto close;
+					err=1;
+					break;
 				}
 				chrarr[0]<<=1;
 			}
+			if (err) break;
+
 			character&=(1<<(6-cnt))-1;
-			int c2=cnt;
+			int c2;
 			for (c2=1; c2<=cnt; c2++) {
 				character<<=6;
 				character|=chrarr[c2]&0x3f;
@@ -52,9 +56,8 @@ int main(int argc, char ** argv) {
 			}
 		}
 	}
-	close:
 
 	fclose(inputFile);
 	fclose(outputFile);
-	return 0;
+	return err;
 }
