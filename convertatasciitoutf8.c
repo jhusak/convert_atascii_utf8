@@ -4,7 +4,7 @@ int main(int argc, char ** argv) {
 	int character;
 
 	if (argc!=3) {
-		printf("Usage: %s fileatascii fileuts-2\n",argv[0]);
+		printf("Usage: %s fileatascii fileutf-8\n",argv[0]);
 		return(64);
 	}
 
