@@ -4,23 +4,30 @@ int main(int argc, char ** argv) {
 	int character;
 	int err=0;
 
-	if (argc!=3) {
+	if (argc!=3 && argc!=1) {
 		printf("Usage: %s infileUTF8 outfileATASCII\n",argv[0]);
 		return(64);
 	}
 
-	inputFile = fopen(argv[1], "r");
-	if (inputFile == NULL) {
-		printf("Error opening %s\n",argv[1]);
-		return 1;
+	if (argc==3) {
+		inputFile = fopen(argv[1], "r");
+		if (inputFile == NULL) {
+			printf("Error opening %s\n",argv[1]);
+			return 1;
+		}
+
+		outputFile = fopen(argv[2], "w");
+		if (outputFile == NULL) {
+			printf("Error opening %s\n",argv[2]);
+			fclose(inputFile);
+			return 1;
+		}
+	} else
+	{
+		inputFile=stdin;
+		outputFile=stdout;
 	}
 
-	outputFile = fopen(argv[2], "w");
-	if (outputFile == NULL) {
-		printf("Error opening %s\n",argv[2]);
-		fclose(inputFile);
-		return 1;
-	}
 
 	while ((character = fgetc(inputFile)) != EOF) {
 		if (character==0xa) {
